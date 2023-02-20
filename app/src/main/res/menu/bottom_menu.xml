@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/home" android:icon="@drawable/ic_baseline_home_24" android:id="@+id/homeFragment"/>
+    <item android:title="@string/messages" android:icon="@drawable/ic_baseline_message_24" android:id="@+id/messageFragment"/>
+    <item android:title="@string/my_courses" android:icon="@drawable/ic_baseline_school_24" android:id="@+id/myCourseFragment"/>
+    <item android:title="@string/my_profile" android:icon="@drawable/ic_baseline_person_24" android:id="@+id/profileFragment"/>
+</menu>

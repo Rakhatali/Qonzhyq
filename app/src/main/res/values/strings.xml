@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Qonzhyq</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="no_account">No account?</string>
+    <string name="registration">Registration</string>
+    <string name="home">Home</string>
+    <string name="best_today">Best today</string>
+    <string name="some_course">Some Course</string>
+    <string name="recommend">Recommend</string>
+    <string name="messages">Messages</string>
+    <string name="teacher">Teacher</string>
+    <string name="my_courses">My Courses</string>
+    <string name="my_profile">My Profile</string>
+    <string name="anna_stone">Anna Stone</string>
+    <string name="professor">Professor</string>
+    <string name="wallet">Wallet</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="add">Add</string>
+</resources>
