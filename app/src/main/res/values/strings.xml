@@ -20,4 +20,8 @@
     <string name="wallet">Wallet</string>
     <string name="withdraw">Withdraw</string>
     <string name="add">Add</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="confirm_email">Confirm Email</string>
+    <string name="code">Code</string>
+    <string name="confirm">Confirm</string>
 </resources>

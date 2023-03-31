@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_login"
-    tools:context=".ui.fragments.LoginFragment">
+    tools:context=".ui.fragments.RegisterFragment">
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +17,7 @@
         android:textStyle="bold"
         android:layout_marginTop="160dp"
         android:layout_marginStart="48dp"
-        android:text="@string/login" />
+        android:text="@string/registration" />
 
     <EditText
         android:id="@+id/et_login"
@@ -41,17 +43,17 @@
         android:hint="@string/password"
         android:paddingStart="24dp"
         android:layout_marginTop="16dp"
-        android:inputType="textPassword" />
+        android:inputType="textEmailAddress" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_sign_in"
+        android:id="@+id/btn_sign_up"
         android:background="@drawable/bg_button"
         android:backgroundTint="@color/main"
         android:layout_gravity="end"
         android:layout_marginEnd="36dp"
         android:layout_marginTop="36dp"
         android:layout_width="160dp"
-        android:text="@string/sign_in"
+        android:text="@string/sign_up"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -65,28 +67,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"/>
-    <LinearLayout
-        android:gravity="center"
-        android:layout_marginBottom="24dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/no_account"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
-        <TextView
-            android:id="@+id/btn_sign_up"
-            android:layout_marginStart="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/registration"
-            android:textColor="@color/third"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
-    </LinearLayout>
+
+
 
 
 </LinearLayout>

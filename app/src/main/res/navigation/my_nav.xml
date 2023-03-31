@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.example.qonzhyq.ui.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_courseFragment"
+            app:destination="@id/courseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/messageFragment"
         android:name="com.example.qonzhyq.ui.fragments.MessageFragment"
@@ -25,4 +29,9 @@
         android:name="com.example.qonzhyq.ui.fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/courseFragment"
+        android:name="com.example.qonzhyq.ui.fragments.CourseFragment"
+        android:label="fragment_course"
+        tools:layout="@layout/fragment_course" />
 </navigation>

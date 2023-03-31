@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/container"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/third"
+    tools:context=".ui.fragments.CourseFragment">
+
     <LinearLayout
         android:id="@+id/btn_best"
         android:orientation="vertical"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/bg_button"
         android:backgroundTint="@color/main"
         android:layout_width="match_parent"
@@ -21,7 +27,7 @@
             app:riv_corner_radius="16dp"/>
 
         <TextView
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_best_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
@@ -32,7 +38,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/tv_description"
+            android:id="@+id/tv_best_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#B3E6D4"
@@ -43,4 +49,28 @@
             android:textSize="14sp"/>
     </LinearLayout>
 
-</FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recommend"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:paddingBottom="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:id="@+id/rv_recommend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_lesson"
+        android:minHeight="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"/>
+
+
+</LinearLayout>

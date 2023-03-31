@@ -11,22 +11,18 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.example.dentalplaza.front.dialog.Dialog
-import com.example.qonzhyq.R
 import com.example.qonzhyq.data.repository.Repository
-import com.example.qonzhyq.databinding.FragmentLoginBinding
 import com.example.qonzhyq.databinding.FragmentRegisterBinding
 import com.example.qonzhyq.ui.activities.MainActivity
-import com.example.qonzhyq.ui.factory.LoginViewModelFactory
 import com.example.qonzhyq.ui.factory.RegisterViewModelFactory
-import com.example.qonzhyq.ui.viewmodel.LoginViewModel
 import com.example.qonzhyq.ui.viewmodel.RegisterViewModel
 import com.example.qonzhyq.utils.Constants
 
-class LoginFragment : Fragment() {
-    private lateinit var binding: FragmentLoginBinding
-    private lateinit var viewModel: LoginViewModel
+
+class RegisterFragment : Fragment() {
+    private lateinit var binding:FragmentRegisterBinding
+    private lateinit var viewModel:RegisterViewModel
     private lateinit var dialog: Dialog
 
 
@@ -34,7 +30,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(layoutInflater)
+        binding = FragmentRegisterBinding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -47,23 +43,17 @@ class LoginFragment : Fragment() {
 
     private fun initVars() {
         val repository = Repository()
-        val viewModelFactory = LoginViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(LoginViewModel::class.java)
+        val viewModelFactory = RegisterViewModelFactory(repository)
+        viewModel = ViewModelProvider(this, viewModelFactory).get(RegisterViewModel::class.java)
         dialog = Dialog(requireActivity())
-
-        val sharedPreference = requireActivity().getSharedPreferences(Constants.PREFERENCE_NAME, Context.MODE_PRIVATE)
-        if (sharedPreference.getString("token", "user") != "user") {
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 
     private fun setListeners() {
-        binding.btnSignIn.setOnClickListener {
+        binding.btnSignUp.setOnClickListener {
             dialog.startLoadingdialog()
             if (binding.etLogin.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
-                viewModel.login(binding.etLogin.text.toString(), binding.etPassword.text.toString())
+                viewModel.register(binding.etLogin.text.toString(), binding.etPassword.text.toString())
             }
         }
 
@@ -75,9 +65,10 @@ class LoginFragment : Fragment() {
                 val editor = sharedPreference.edit()
                 editor.putString("token", it.body()!!.token)
                 editor.apply()
+                Toast.makeText(activity, it.body().toString(), Toast.LENGTH_SHORT).show()
                 Log.d("Response", sharedPreference.getString("token", "user")!!)
                 dialog.dismissdialog()
-                val intent: Intent = Intent(activity, MainActivity::class.java)
+                val intent:Intent = Intent(activity, MainActivity::class.java)
                 startActivity(intent)
             } else {
                 Log.d("Response", it.errorBody().toString())
@@ -86,5 +77,4 @@ class LoginFragment : Fragment() {
             }
         })
     }
-
 }
