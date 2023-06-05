@@ -8,16 +8,29 @@
     android:orientation="vertical"
     tools:context=".ui.fragments.ProfileFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/my_profile"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"/>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/my_profile"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"/>
+        <ImageView
+            android:id="@+id/btn_exit"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/baseline_exit_to_app_24"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:padding="6dp"
+            app:tint="@color/white" />
+    </LinearLayout>
     <LinearLayout
         android:layout_margin="24dp"
         android:layout_width="match_parent"
@@ -39,7 +52,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/anna_stone"
+                android:text="Daulet Argynbayev"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"/>
@@ -47,23 +60,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/professor"
+                android:text="Student"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
         </LinearLayout>
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="36dp"
-        android:text="  Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.\n
-  Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-        android:textColor="#BDB3F7"
-        android:textSize="16sp"/>
 
 
     <LinearLayout
@@ -92,7 +95,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="125 000 Tg"
+                android:text="0 Tg"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="20sp"

@@ -8,69 +8,74 @@
     android:background="@color/third"
     tools:context=".ui.fragments.CourseFragment">
 
-    <LinearLayout
-        android:id="@+id/btn_best"
-        android:orientation="vertical"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_button"
-        android:backgroundTint="@color/main"
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:id="@+id/webView"/>
 
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:src="@color/white"
-            android:scaleType="center"
-            app:riv_corner_radius="16dp"/>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/btn_best"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginEnd="24dp"-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:background="@drawable/bg_button"-->
+<!--        android:backgroundTint="@color/main"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <TextView
-            android:id="@+id/tv_best_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/some_course"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+<!--        <com.makeramen.roundedimageview.RoundedImageView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="160dp"-->
+<!--            android:src="@color/white"-->
+<!--            android:scaleType="center"-->
+<!--            app:riv_corner_radius="16dp"/>-->
 
-        <TextView
-            android:id="@+id/tv_best_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#B3E6D4"
-            android:text="  Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="24dp"
-            android:textSize="14sp"/>
-    </LinearLayout>
+<!--        <TextView-->
+<!--            android:id="@+id/tv_best_title"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:text="@string/some_course"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"/>-->
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/recommend"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="@color/white"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"/>
+<!--        <TextView-->
+<!--            android:id="@+id/tv_best_description"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="#B3E6D4"-->
+<!--            android:text="  Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:textSize="14sp"/>-->
+<!--    </LinearLayout>-->
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:paddingBottom="24dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:id="@+id/rv_recommend"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/item_lesson"
-        android:minHeight="300dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/recommend"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="20sp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginTop="16dp"/>-->
+
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:paddingBottom="24dp"-->
+<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--        android:id="@+id/rv_recommend"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:listitem="@layout/item_lesson"-->
+<!--        android:minHeight="300dp"-->
+<!--        android:layout_marginStart="24dp"-->
+<!--        android:layout_marginEnd="24dp"/>-->
 
 
 </LinearLayout>

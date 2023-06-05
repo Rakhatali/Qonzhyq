@@ -15,12 +15,12 @@ import retrofit2.http.Query
 
 interface CourseApi {
 
-    @POST("/user/sign-in")
+    @POST("/registration/registration.html")
     suspend fun login(
         @Body credentialsRequest: CredentialsRequest
     ): Response<TokenResponse>
 
-    @POST("/user/sign-up")
+    @POST("/registration/registration.html")
     suspend fun register(
         @Body credentialsRequest: CredentialsRequest
     ): Response<TokenResponse>
@@ -29,7 +29,7 @@ interface CourseApi {
     @GET("/course/all")
     suspend fun getCourses(): Response<List<Course>>
 
-    @GET("/user/profile")
+    @GET("/student/home.html")
     suspend fun getUser(
         @Header("Authorization") authHeader: String
     ): Response<User>

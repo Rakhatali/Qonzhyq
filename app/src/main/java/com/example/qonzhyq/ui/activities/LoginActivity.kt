@@ -2,6 +2,7 @@ package com.example.qonzhyq.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebViewClient
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.qonzhyq.R
@@ -21,4 +22,5 @@ class LoginActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
     }
+
 }

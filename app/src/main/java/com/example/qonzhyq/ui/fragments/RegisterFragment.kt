@@ -53,28 +53,28 @@ class RegisterFragment : Fragment() {
         binding.btnSignUp.setOnClickListener {
             dialog.startLoadingdialog()
             if (binding.etLogin.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
-                viewModel.register(binding.etLogin.text.toString(), binding.etPassword.text.toString())
+//                viewModel.register(binding.etLogin.text.toString(), binding.etPassword.text.toString())
             }
         }
 
 
-        viewModel.tokenResponse.observe(viewLifecycleOwner, Observer {
-            dialog.dismissdialog()
-            if (it.isSuccessful) {
-                val sharedPreference = requireActivity().getSharedPreferences(Constants.PREFERENCE_NAME, Context.MODE_PRIVATE)
-                val editor = sharedPreference.edit()
-                editor.putString("token", it.body()!!.token)
-                editor.apply()
-                Toast.makeText(activity, it.body().toString(), Toast.LENGTH_SHORT).show()
-                Log.d("Response", sharedPreference.getString("token", "user")!!)
-                dialog.dismissdialog()
-                val intent:Intent = Intent(activity, MainActivity::class.java)
-                startActivity(intent)
-            } else {
-                Log.d("Response", it.errorBody().toString())
-                Log.d("Response", it.code().toString())
-                Toast.makeText(activity, it.errorBody().toString(), Toast.LENGTH_SHORT).show()
-            }
-        })
+//        viewModel.tokenResponse.observe(viewLifecycleOwner, Observer {
+//            dialog.dismissdialog()
+//            if (it.isSuccessful) {
+//                val sharedPreference = requireActivity().getSharedPreferences(Constants.PREFERENCE_NAME, Context.MODE_PRIVATE)
+//                val editor = sharedPreference.edit()
+//                editor.putString("token", it.body()!!.token)
+//                editor.apply()
+//                Toast.makeText(activity, it.body().toString(), Toast.LENGTH_SHORT).show()
+//                Log.d("Response", sharedPreference.getString("token", "user")!!)
+//                dialog.dismissdialog()
+//                val intent:Intent = Intent(activity, MainActivity::class.java)
+//                startActivity(intent)
+//            } else {
+//                Log.d("Response", it.errorBody().toString())
+//                Log.d("Response", it.code().toString())
+//                Toast.makeText(activity, it.errorBody().toString(), Toast.LENGTH_SHORT).show()
+//            }
+//        })
     }
 }

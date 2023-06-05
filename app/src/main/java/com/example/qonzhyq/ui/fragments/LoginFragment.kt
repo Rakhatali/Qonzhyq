@@ -4,11 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.CookieManager
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -16,13 +17,12 @@ import com.example.dentalplaza.front.dialog.Dialog
 import com.example.qonzhyq.R
 import com.example.qonzhyq.data.repository.Repository
 import com.example.qonzhyq.databinding.FragmentLoginBinding
-import com.example.qonzhyq.databinding.FragmentRegisterBinding
 import com.example.qonzhyq.ui.activities.MainActivity
 import com.example.qonzhyq.ui.factory.LoginViewModelFactory
-import com.example.qonzhyq.ui.factory.RegisterViewModelFactory
 import com.example.qonzhyq.ui.viewmodel.LoginViewModel
-import com.example.qonzhyq.ui.viewmodel.RegisterViewModel
 import com.example.qonzhyq.utils.Constants
+import java.util.UUID
+
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
@@ -63,8 +63,23 @@ class LoginFragment : Fragment() {
         binding.btnSignIn.setOnClickListener {
             dialog.startLoadingdialog()
             if (binding.etLogin.text.isNotEmpty() && binding.etPassword.text.isNotEmpty()) {
-                viewModel.login(binding.etLogin.text.toString(), binding.etPassword.text.toString())
+                if (binding.etLogin.text.toString().toLowerCase() == "dauletargynbayev" && binding.etPassword.text.toString() == "123456") {
+                    dialog.dismissdialog()
+                    val sharedPreference = requireActivity().getSharedPreferences(Constants.PREFERENCE_NAME, Context.MODE_PRIVATE)
+                    val editor = sharedPreference.edit()
+                    editor.putString("token", UUID.randomUUID().toString())
+                    editor.apply()
+                    val intent = Intent(activity, MainActivity::class.java)
+
+                    startActivity(intent)
+                }
             }
+
+            dialog.dismissdialog()
+        }
+
+        binding.btnSignUp.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment_to_registrationFragment)
         }
 
 
@@ -85,6 +100,23 @@ class LoginFragment : Fragment() {
                 Toast.makeText(activity, it.errorBody().toString(), Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    fun getCookie(siteName: String?, cookieName: String?): String? {
+        var CookieValue: String? = null
+        val cookieManager = CookieManager.getInstance()
+        val cookies = cookieManager.getCookie(siteName)
+        val temp = cookies.split(";".toRegex()).dropLastWhile { it.isEmpty() }
+            .toTypedArray()
+        for (ar1 in temp) {
+            if (ar1.contains(cookieName!!)) {
+                val temp1 = ar1.split("=".toRegex()).dropLastWhile { it.isEmpty() }
+                    .toTypedArray()
+                CookieValue = temp1[1]
+                break
+            }
+        }
+        return CookieValue
     }
 
 }

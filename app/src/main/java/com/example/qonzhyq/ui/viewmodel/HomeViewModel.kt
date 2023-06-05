@@ -21,10 +21,10 @@ class HomeViewModel(private val repository: Repository): ViewModel() {
         }
     }
 
-    fun getUser() {
-        viewModelScope.launch {
-            val response = repository.getUser(Constants.token)
-            Log.e("123", response.toString())
-        }
-    }
+//    fun getUser() {
+//        viewModelScope.launch {
+//            val response = repository.getUser(Constants.token)
+//            Log.e("123", response.toString())
+//        }
+//    }
 }

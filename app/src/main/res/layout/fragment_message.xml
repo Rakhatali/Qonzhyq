@@ -6,21 +6,8 @@
     android:orientation="vertical"
     android:background="@color/third"
     tools:context=".ui.fragments.MessageFragment">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/messages"
-        android:textStyle="bold"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"/>
-
-    <androidx.recyclerview.widget.RecyclerView
+    <WebView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        tools:listitem="@layout/item_message"
-        android:layout_weight="1"/>
+        android:layout_height="match_parent"
+        android:id="@+id/webView"/>
 </LinearLayout>

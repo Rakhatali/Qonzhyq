@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="@string/some_course"
+                android:text="test"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:textSize="16sp"
@@ -66,7 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#B3E6D4"
-                android:text="  Morem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+                android:text="asdfghjkl."
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="24dp"
@@ -84,16 +84,92 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="16dp"/>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:paddingBottom="24dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:id="@+id/rv_recommend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:listitem="@layout/item_recommend"
-            android:minHeight="300dp"
+        <LinearLayout
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/btn_best_1"
+            android:orientation="vertical"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"/>
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@color/white"
+                android:scaleType="center"
+                app:riv_corner_radius="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_best_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="test"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_best_description_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#B3E6D4"
+                android:text="asdfghjkl."
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/btn_best_2"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@color/white"
+                android:scaleType="center"
+                app:riv_corner_radius="16dp"/>
+
+            <TextView
+                android:id="@+id/tv_best_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="Ауқымды желі"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_best_description_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#B3E6D4"
+                android:text="Ауқымды желі (Глобальная сеть; GAN — global area network немесе WAN — wide area network) — жүздеген және мындаған километрлік аумақты қамтитын халықаралық, мемлекетаралық, республикалық немесе салалық компьютер желілері. Кез келген компьютерді, олардың орналасқан географиялық мекен-жайына қарамастан, бір-бірімен байланыстыруға мүмкіндік береді. Ауқымды желі көбінесе жергілікті және аймақтық есептеу желілерін біріктіру нәтижесінде құрылады. Ауқымды есептеу желісі (Глобальная вычислительная сеть) — бір- бірінен алыс орналасқан жергілікті желілер мен жеке компьютерлерді байланыстыратын есептеу желісі. Ауқымды есептеу желілері негізгі үш құрауыштан тұрады: а) желінің түйіні ретінде қарастырылатын жергілікті есептеу желілері; ә) жергілікті есептеу желілерін байланыстыратын арналар; б) байланыс арналарына қатынас құруға мүмкіндік беретін жабдықтар мен программалар. Мысалы, Internet торабы — түрлі-түрлі хаттамалармен жұмыс істейтін, әр түрлі есептеу машиналарын байланыстыратын, мәліметтерді тасығыштардың (телефон сымдары, оптикалық талшық, жер серігінің арналары және радио-модемдер сияқты) барлық түрлерімен тасымалдайтын компьютерлік желілердің бірлестігі. Ең көп тараған қызмет көрсету түрлері: электрондық пошта (E-mail), желілік жаңалықтар немесе телемәслихат (Usenet), тарату тізімдері (Maillists), бүкіл әлемдік өрмек (WWW— World Wide Web), файлдар жеткізу (FTP — File Transfer Protocol), қашықтан қатынас құру (Telnet) жөне т.б."
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="24dp"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
